@@ -1,0 +1,100 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="item-sheet-header">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+        <div class="header-fields">
+            <h1 class="charname"><input name="name" class="itemname" type="text" title="{{item.name}}" value="{{item.name}}" placeholder="Name"/>
+            {{#if showhelpers}}
+              <i id="sb-itemsheet-helper-dropdown-name-{{item.id}}" class="sb-itemsheet-helper-dropdown fa-solid fa-square-caret-down"></i>
+            {{/if}}
+            </h1>
+            <h3 class="typelabel cItem">GROUP</h3>
+        </div>
+    </header>
+
+    {{!-- Sheet Tab Navigation --}}
+    <div class="atabs">
+        <nav class="sheet-tabs tabs" data-group="primary">
+            <a class="item item-tab-button" data-tab="description">{{localize 'SANDBOX.ItemSheet.Labels.Tab.Description'}}</a>
+            <a class="item item-tab-button" data-tab="details">{{localize 'SANDBOX.ItemSheet.Labels.Tab.Details'}}</a>
+            <a class="item item-tab-button" data-tab="properties">{{localize 'SANDBOX.ItemSheet.Labels.Tab.Properties'}}</a>
+        </nav>
+    </div>
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+        {{!-- Description Tab --}}
+        <div class="tab biography active" data-group="primary" data-tab="description">
+            {{editor
+                enrichedBiography
+                target="system.description"
+                button=true
+                editable=editable
+            }}
+        </div>
+
+        {{!-- Details Tab --}}
+        <div class="tab biography active" data-group="primary" data-tab="details">
+          {{!-- Item Sheet Helpers Menu Bar --}}
+    {{#if showhelpers}}
+      <div class="sb-item-helpers-menu-bar-div">
+        <li class=" sb-menu-bar">
+          <a id="sb-item-helpers-menu-bar-item-autogenerateall" title="Autogenerate All" class=" sb-menu-bar-button"><i class="fas fa-wand-magic-sparkles fa-fw"></i></a>
+          <a id="sb-item-helpers-menu-bar-item-validateall" title="Validate All" class=" sb-menu-bar-button"><i class="fas fa-spell-check fa-fw"></i></a>
+          <a id="sb-item-helpers-menu-bar-item-clearall" title="Clear All" class=" sb-menu-bar-button"><i class="fas fa-times-circle fa-fw"></i></a>
+          <a id="sb-item-helpers-menu-bar-item-show-sandbox-settings" style="float: right;" title="Sandbox Settings" class=" sb-menu-bar-button"><i class="fas fa-cog fa-fw"></i></a>
+          
+        </li>
+    </div>
+    {{/if}}
+            <div class="flexblock">
+                <div class="col-1-2">
+                    <div class="new-row">
+                        <div class="flexblock-left">
+                            <label class="label-medlarge">Group Key</label>
+                            <input type="text" name="system.groupKey" title="{{item.system.groupKey}}" value="{{item.system.groupKey}}" data-dtype="String"/>
+                            {{#if showhelpers}}
+                              <i id="sb-itemsheet-helper-dropdown-key-{{item.id}}" class="sb-itemsheet-helper-dropdown fa-solid fa-square-caret-down"></i>
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-1-2">
+                    <div class="new-row">
+                        <div class="flexblock-left">
+                            <label class="label-med">Unique</label>
+                            <input class="check-haslabel" name="system.isUnique" id="check-haslabel" type="checkbox" {{checked item.system.isUnique}}/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{!-- Properties Tab --}}
+        <div class="tab properties scrollable" data-group="primary" data-tab="properties">
+            <div class="righttext">
+                <label class="label-med">Constant</label>
+            </div>
+            <ol class="properties-list">
+
+                {{#each item.system.properties as |property id|}}
+                <li class="property group-row-block" data-item-id="{{id}}">
+                  <img class="sb-item-list-icon" src="{{{sb_item_icon property.id}}}"/>
+                    <label class="group-name  sb-sub-item-label">{{property.name}}</label>
+                    
+                    <div class="groupblock">
+                        <div class="groupblock">
+                            <a class="group-controls item-top " title="Top Item"><i class="fas fa-arrow-alt-circle-up"></i></a>
+                            <a class="group-controls item-bottom" title="Bottom Item"><i class="fas fa-arrow-alt-circle-down"></i></a>
+                            <a class="group-controls item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="group-controls item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+
+                        </div>
+                        <input class="check-isconstant" propname = {{property.id}} name="{{id}}.isconstant" type="checkbox" {{checked property.isconstant}}/>
+                    </div>
+                </li>
+                {{/each}}
+            </ol>
+        </div>
+
+    </section>
+</form>

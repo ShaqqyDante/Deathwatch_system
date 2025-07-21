@@ -1,0 +1,55 @@
+<form id="sb-lookup-table-editor-form-content-{{{itemid}}}" class="sb-lookup-table-editor-form-content">
+  <h2 class="module-header" style="padding-top:5px;border-top: 1px solid #b5b3a4;">Lookup Table Editor<i id="sb-btn-show-settings" title="Show Sandbox Settings"  class="fas fa-cog"></i></h2>
+  <table>
+    <tr>
+      <td class="sb-lookup-table-editor-target-type">Target type  </td><td><input id="sb-lookup-table-editor-target-type-name-{{{itemid}}}" type="text" value="{{itemtype}}" style="width:64px;" disabled> </td>
+      <td class="sb-lookup-table-editor-target-item">Target item  </td><td><input id="sb-lookup-table-editor-target-item-name-{{{itemid}}}" type="text" value="{{itemname}}" disabled> </td>
+      <td class="sb-lookup-table-editor-target-input">Target input</td><td><input id="sb-lookup-table-editor-target-input-name-{{{itemid}}}"type="text" value="{{itemlabel}}" disabled></td>
+    </tr>
+  </table>
+  <table style="border-style:none;background: rgba(0, 0, 0, 0);margin: 0px;">
+    <tr>
+      <td style="text-align:left;padding-right:5px;padding-left:5px;">  
+
+      </td>
+
+      <td style="text-align:right;padding-right:5px;padding-left:5px;">
+        <i class="sb-btn sb-lookup-table-editor-import fas fa-file-import" data-tooltip="Import table from semi colon separated text file"></i>
+        <i class="sb-btn sb-lookup-table-editor-export fas fa-file-export" data-tooltip="Export table to semi colon separated text file"></i>
+        <i class="sb-btn sb-lookup-table-editor-copy fas fa-copy" data-tooltip="Copy entire table to Clipboard"></i>
+        <i class="sb-btn sb-lookup-table-editor-copy-pre-formatted fab fa-discord" data-tooltip ="Copy table to Clipboard pre-formatted for Discord"></i>
+      </td>
+    </tr>
+  </table>
+  <!-- Main data container -->
+  <div class="sb-lookup-table-editor-data-container">
+    <table id="sb-lookup-table-editor-data-table-{{{itemid}}}" class="sb-lookup-table-editor-data-table"  name="sb-lookup-table-editor-data-table">
+      <thead id="sb-lookup-table-editor-data-thead-{{{itemid}}}" class="sb-lookup-table-editor-data-thead">
+        <tr id="sb-lookup-table-editor-data-thead-row-{{{itemid}}}">
+          {{{columns}}}
+        </tr>
+      </thead>
+      <tbody id="sb-lookup-table-editor-data-tbody-{{{itemid}}}" class="sb-lookup-table-editor-data-tbody">
+        {{{rows}}}
+      </tbody>
+      <tfoot class="sb-lookup-table-editor-data-tfoot">
+        <tr id="sb-lookup-table-editor-footer-{{{itemid}}}" class="sb-lookup-table-editor-footer">{{{footer}}}</tr>
+      </tfoot>
+    </table>
+  </div>
+  <!-- Settings Footer -->
+  <footer class="sheet-footer flexrow">
+    <button type="button" name="sb-lookup-table-editor-update">
+      <i class="fas fa-check"></i> Update
+    </button>
+
+    <button type="button" name="sb-lookup-table-editor-update-and-close">
+      <i class="fas fa-check"></i> Update and close
+    </button>
+
+    <button type="button" name="sb-lookup-table-editor-close-editor">
+      <i class="fas fa-times"></i> Close
+    </button>
+  </footer>
+
+</form>

@@ -1,0 +1,87 @@
+
+  {{#if info.show.showAll }} 
+    {{!-- showAll - OK --}}
+    <form class="editable" autocomplete="off">
+      {{!-- Item header --}}
+      <header class="item-sheet-header" style="border-bottom:1px solid grey">
+      
+        <div class="sb-two-col-card-wrapper">
+        <div class="sb-two-col-card-image-in-chat">
+           <img class="profile-img" src="{{info.image}}" data-edit="img" title="{{info.name}}"/>
+        </div>  
+        <div class="sb-two-col-card-name">
+          
+          <span class="sb-info-chat-msg-objectname-compact">{{info.name}}</span>
+         
+        </div>
+      </div>
+      
+      
+      
+      
+        
+        
+      </header>
+        
+      {{!-- Sheet Body --}}
+      <section class="sheet-body">
+        {{!-- Description Tab --}}
+        <div class="tab biography citem-bio active scrollable" data-group="primary" data-tab="description">
+
+            
+            {{editor
+                enrichedBiography
+                target="data.data.description"
+                button=true
+                editable=editable
+            }}
+        </div>                     
+      </<section> 
+    </form> 
+  {{ else}}
+
+    {{#if info.show.showNameOnly }} 
+      {{!-- showNameOnly - OK --}}              
+      <h1 class="charname"><input name="name" class="itemname" style="width:100%;text-align:center;" type="text" value="{{info.name}}" placeholder="Name" readonly/></h1>          
+
+    {{ else if info.show.showImageOnly}}
+
+      <form class="locked flexcol" autocomplete="off">
+        
+        <img  src="{{info.image}}" class="sb-info-form-image"  data-edit="img" />
+      </form>
+
+
+
+    {{ else if info.show.showDescriptionOnly}}
+      <section class="sheet-body" >
+        {{!-- Description Tab --}}      
+        <div class="tab biography citem-bio active scrollable" data-group="primary" data-tab="description" style="min-height:308px;max-height: 815px;" >      
+          {{editor
+                enrichedBiography
+                target="data.data.description"
+                button=true
+                editable=editable
+            }}       
+        </div>                      
+      </section>
+
+    {{ else if info.show.showNameAndImage}} 
+      <form class="locked flexcol" autocomplete="off">
+        
+        <img  src="{{info.image}}" class="sb-info-form-image"  data-edit="img" />
+        <div class="sb-info-form-name-tag">{{info.name}}</div>
+      </form>
+      
+
+    {{ else if info.show.showNameAndDescription}} 
+
+
+
+
+    {{ else if info.show.showImageAndDescription}}
+
+
+    {{/if}}
+  {{/if}}
+

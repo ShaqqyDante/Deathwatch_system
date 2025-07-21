@@ -1,0 +1,92 @@
+<div class="roll-template ">
+  <div class="roll-flexrow">
+    {{#if token.img}}
+    <img class = "roll-sender-image" src="{{token.img}}" title="{{token.name}}"/>
+    {{/if}}
+
+      <div class="roll-flexrow roll-underline ">
+      <h4 class="roll-sender-name">{{actor}}</h4>
+      <span class="roll-delete-button">
+        
+        <a class="roll-message-delete"><i class="fas fa-trash"></i></a>
+        
+      </span>
+      </div>
+
+  </div>
+
+  {{#if isWhisper}}
+  <span class="whisper-to">{{localize 'CHAT.To'}}: {{whisperTo}}</span>
+  {{/if}}
+
+  <div class="sb-do-not-show-in-lastroll"></div>
+  {{#if compact_mode}}
+  
+  
+    <div class="sb-info-chat-msg-objectheader-compact" >
+      <div class="sb-two-col-card-wrapper">
+        <div class="sb-two-col-card-image-in-chat">
+        {{#if objectimage}}
+          <img src="{{{objectimage}}}" class="sb-info-chat-msg-objectimage-img-compact"/>
+        {{/if}}
+        </div>  
+        <div class="sb-two-col-card-name">
+          {{#if objectname}}
+          <span class="sb-info-chat-msg-objectname-compact">{{{objectname}}}</span>
+         {{/if}} 
+        </div>
+      </div>
+    </div>  
+    
+     
+    
+        
+    {{#if objectinfo}} 
+      
+      <div class="sb-info-chat-msg-objectinfo-compact" >
+      
+      {{{objectinfo}}}
+    </div>
+    {{/if}}
+    
+    
+  {{else}}
+    <div class="sb-info-chat-msg-objectheader" > 
+      {{#if objectimage}}
+      <div class="sb-info-chat-msg-objectimage" > 
+              <img src="{{{objectimage}}}" class="sb-info-chat-msg-objectimage-img"/>
+      </div>
+      {{/if}}
+
+      {{#if objectname}}
+      <div class="sb-info-chat-msg-objectname" >        
+        {{{objectname}}}
+      </div>
+      {{else}}
+      <div style="height:22px;">                  
+      </div>
+      {{/if}}
+    </div>      
+
+    {{#if objectinfo}}
+    <div class="sb-info-chat-msg-objectinfo" >
+      {{{objectinfo}}}
+    </div>
+    {{/if}}
+  {{/if}}
+   
+  <div class="roll-extra">
+    <div class="roll-flexrow">
+      <div class="roll-user righttext">
+        {{{user}}}
+      </div>
+    </div>
+  </div>
+
+  <div class="roll-flexrow">
+    <div class="roll-timestamp message-timestamp">
+      {{{data.timestamp}}}
+    </div>
+  </div>
+
+</div>

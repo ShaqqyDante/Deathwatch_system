@@ -1,0 +1,57 @@
+
+<form class="sb-table-filter-editor-form-content">
+  <h2 class="module-header" style="padding-top:5px;border-top: 1px solid #b5b3a4;">Table Filter Editor<i id="sb-btn-show-settings" title="Show Sandbox Settings"  class="fas fa-cog"></i></h2>
+  <table>
+    <tr>
+      <td class="sb-table-filter-editor-target-type">Target type  </td><td><input type="text" value="{{itemtype}}" style="width:64px;" disabled> </td>
+      <td class="sb-table-filter-editor-target-item">Target item  </td><td><input type="text" value="{{itemname}}" disabled> </td>
+      <td class="sb-table-filter-editor-target-input">Target input</td><td><input type="text" value="{{itemlabel}}" disabled></td>
+    </tr>
+  </table>
+  <table style="border-style:none;background: rgba(0, 0, 0, 0);margin: 0px;">
+    <tr>
+      <td style="text-align:left;padding-right:5px;padding-left:5px;">  
+
+      </td>
+
+      <td style="text-align:right;padding-right:5px;padding-left:5px;">
+
+        <i class="sb-btn copy-table-filter fas fa-copy" title="Copy entire table filter to Clipboard"></i>
+        <i class="sb-btn copy-table-filter-pre-formatted fab fa-discord" title="Copy table filter to Clipboard pre-formatted for Discord"></i>
+      </td>
+    </tr>
+  </table>
+  <!-- Main data container -->
+  <table class="sb-table-filter-editor-data-table" id="sb-table-filter-editor-data-table" name="sb-table-filter-editor-data-table">
+    <thead>
+      <tr>
+        <th class="sb-table-filter-editor-tableheader">Logic</th>
+        <th class="sb-table-filter-editor-tableheader">Type</th>
+        <th class="sb-table-filter-editor-tableheader">Key</th>
+        <th class="sb-table-filter-editor-tableheader">Operator</th>
+        <th class="sb-table-filter-editor-tableheader">Value</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody id="sb-table-filter-editor-data-tbody-{{{itemid}}}">
+      {{{expression}}}
+      <tr><td colspan="6"><i class="sb-btn sb-table-filter-editor-add-row fas fa-plus-circle fa-1x" title="Add new condition"></i></td></tr>
+    </tbody>
+  </table>
+
+  <!-- Settings Footer -->
+  <footer class="sheet-footer flexrow">
+    <button type="button" name="update-table-filter">
+      <i class="fas fa-check"></i> Update
+    </button>
+
+    <button type="button" name="update-table-filter-and-close">
+      <i class="fas fa-check"></i> Update and close
+    </button>
+
+    <button type="button" name="close-editor">
+      <i class="fas fa-times"></i> Close
+    </button>
+  </footer>
+
+</form>

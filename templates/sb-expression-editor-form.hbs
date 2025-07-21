@@ -1,0 +1,75 @@
+<link rel="stylesheet" href="../systems/sandbox/styles/sb-codemirror.css">
+<script src="../modules/_CodeMirror/lib/codemirror.js"></script>
+<script src="../modules/_CodeMirror/addon/mode/simple.js"></script>
+<script src="../modules/_CodeMirror/addon/edit/matchbrackets.js"></script>
+<script src="../systems/sandbox/module/sb-expression-editor-code-mirror.js"></script>
+<form class="sandbox-expression-editor-form-content">
+<h2 class="module-header" style="padding-top:5px;border-top: 1px solid #b5b3a4;">Expression Editor<i id="sb-btn-show-settings" title="Show Sandbox Settings"  class="fas fa-cog"></i></h2>
+<table>
+  <tr>
+    <td class="sandbox-expression-editor-target-type">Target type  </td><td><input type="text" value="{{itemtype}}" style="width:64px;" disabled> </td>
+    <td class="sandbox-expression-editor-target-item">Target item  </td><td><input type="text" value="{{itemname}}" disabled> </td>
+    <td class="sandbox-expression-editor-target-input">Target input</td><td><input type="text" value="{{itemlabel}}" disabled></td>
+  </tr>
+</table>
+<table style="border-style:none;background: rgba(0, 0, 0, 0);margin: 0px;">
+  <tr>
+    <td style="text-align:left;padding-right:5px;padding-left:5px;">  
+      <i class="sb-btn copy-selection fas fa-copy" title="Copy selection to Clipboard"></i>
+      <i class="sb-btn paste-text-from-clipboard fas fa-paste" title="Paste text from Clipboard"></i>
+    
+      <i class="sb-btn font-size-increase fas fa-search-plus" style="margin-left: 20px;" title="Increase font size used in editor"></i>
+      <i class="sb-btn font-size-decrease fas fa-search-minus" title="Decrease font size used in editor"></i>
+      <i class="sb-btn font-size-reset fas fa-recycle" title="Reset font size used in editor"></i>
+    </td>
+    
+    <td style="text-align:right;padding-right:5px;padding-left:5px;">
+      
+      <i class="sb-btn copy-expression fas fa-copy" title="Copy entire expression to Clipboard"></i>
+      <i class="sb-btn copy-expression-pre-formatted fab fa-discord" title="Copy expression to Clipboard pre-formatted for Discord"></i>
+    </td>
+  </tr>
+</table>
+<textarea spellcheck="false" class="sandbox-expression-editor-textarea" id="sandbox-expression-editor-expression" name="sandbox-expression-editor-expression" >{{expression}}</textarea>
+   {{#if this.isSplittedBySemiColon}} 
+   <p><b>Line break Mode: Semicolon</b><br>Line breaks in the editor will be replaced by semicolons in the target input<br>
+   When loading the expression to the editor, a semicolon will be interpreted as a linebreak<br>
+   Tabs and white spaces in the editor will not be preserved to the target input
+   </p>
+   {{else if this.isSplittedByComma}}
+   <p><b>Line break Mode: Comma</b><br>Line breaks in the editor will be replaced by comma in the target input<br>
+   When loading the expression to the editor, a comma will be interpreted as a linebreak<br>
+   Tabs and white spaces in the editor will not be preserved to the target input
+   </p>
+   {{else if this.isSplittedBySingleSpace}}
+   <p><b>Line break Mode: Single Space</b><br>Line breaks in the editor will be replaced by a single space in the target input<br>
+   When loading the expression to the editor, a single space will be interpreted as a linebreak<br>
+   Tabs and white spaces in the editor will be preserved to the target input
+   </p>
+   {{else if this.isSplittedByRowBreak}}
+   <p><b>Line break Mode: Row Break</b><br>
+   Tabs and white spaces in the editor will be preserved to the target input
+   </p>
+   {{else}}
+   <p><b>Line break Mode: Two Spaces</b><br>Line breaks in the editor will be replaced by two spaces in the target input<br>
+   When loading the expression to the editor, two spaces will be interpreted as a linebreak<br>
+   Tabs in the editor will be preserved to the target input
+   </p>
+   {{/if}}
+
+      <!-- Settings Footer -->
+    <footer class="sheet-footer flexrow">
+         <button type="button" name="update-expression">
+            <i class="fas fa-check"></i> Update
+        </button>
+        
+        <button type="button" name="update-expression-and-close">
+            <i class="fas fa-check"></i> Update and close
+        </button>
+        
+        <button type="button" name="close-editor">
+            <i class="fas fa-times"></i> Close
+        </button>
+    </footer>
+
+</form>

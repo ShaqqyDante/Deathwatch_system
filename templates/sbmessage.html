@@ -1,0 +1,40 @@
+<div class="sbchat-template">
+    <div class="sbchat-content">
+
+        <div class="sbchat-flexrow sbchat-header">
+            {{#if token.img}}
+            <img class = "roll-sender-image" src="{{token.img}}" title="{{token.name}}"/>
+            {{/if}}
+            <div class="sbchat-flexrow roll-underline">
+                <h4 class="sbchat-sender-name">{{user}}</h4>
+                <span class="roll-delete-button">
+                    {{#isGM}}
+                    <a class="roll-message-delete"><i class="fas fa-trash"></i></a>
+                    {{/isGM}}
+                </span>
+            </div>
+
+
+
+
+
+        </div>
+
+        {{#if isWhisper}}
+        <div class="sbchat-whisper">
+            <span class="whisper-to">WHISPER</span>
+            <span class="whisper-to">{{localize 'CHAT.To'}}: {{whisperTo}}</span>
+        </div>
+        {{/if}}
+
+        <div class="sbchat-message">
+            {{{message}}}
+        </div>
+
+        <div class="sbchat-flexrow centertext">
+            <div class="sbchat-timestamp message-timestamp">
+                {{{data.timestamp}}}
+            </div>
+        </div>
+    </div>
+</div>

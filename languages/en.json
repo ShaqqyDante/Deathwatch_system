@@ -1,0 +1,453 @@
+{
+  "Ok":"Ok",
+  "Information":"Information",  
+  "ConfirmDelete":"Confirm delete",
+  "FILES.TitleTextextended": "File Browser",
+  "FILES.TitleJson": "Select JSON file",
+  "FILES.TitleCsv": "Select CSV file",
+  "SANDBOX.ItemSheet.Labels.Tab.Description":"Description",
+  "SANDBOX.ItemSheet.Labels.Tab.Properties":"Properties",
+  "SANDBOX.ItemSheet.Labels.Tab.Groups":"Groups",
+  "SANDBOX.ItemSheet.Labels.Tab.Mods":"Mods",
+  "SANDBOX.ItemSheet.Labels.Tab.Details":"Details",
+  "SANDBOX.ItemSheet.Labels.Tab.Panels":"Panels",
+  
+  "SANDBOX.cItem.ItemAttribute.UseType.Caption":"Use Type",
+  "SANDBOX.cItem.ItemAttribute.UseType.Passive.Caption":"Passive",
+  "SANDBOX.cItem.ItemAttribute.UseType.Activation.Caption":"Activation",
+  "SANDBOX.cItem.ItemAttribute.UseType.Consumable.Caption":"Consumable",
+  "SANDBOX.cItem.ItemAttribute.Icon.Caption":"Activation Icon",
+  
+  "SANDBOX.cItem.ItemAttribute.SelfDestruct.Caption":"Self-destruct",
+  "SANDBOX.cItem.ItemAttribute.SelfDestruct.Tooltip":"If checked, all MODS that are not from the SET type will be permanently executed and the cItem will self destroy",
+  
+  "SANDBOX.cItem.ItemAttribute.Permanent.Caption":"Permanent",
+  "SANDBOX.cItem.ItemAttribute.Permanent.Tooltip":"If checked, the MOD effects will stay even if the cItem or MODs have been deleted/deactivated",
+  
+  "SANDBOX.cItem.ItemAttribute.MaxUses.Caption":"Max Uses",
+  "SANDBOX.cItem.ItemAttribute.MaxUses.Tooltip":"Can be an Expression.<br>Set to 0 for unlimited uses.",
+  
+  "SANDBOX.cItem.ItemAttribute.Rechargable.Caption":"Rechargable",
+  "SANDBOX.cItem.ItemAttribute.RemoveAfterLastUse.Caption":"Remove after last use",
+  
+  "SANDBOX.cItem.ItemAttribute.IsTokenIcon.Caption":"Has Icon",
+  "SANDBOX.cItem.ItemAttribute.TokenVisible.Caption":"Always on",
+  "SANDBOX.cItem.ItemAttribute.IconPath.Caption":"Icon Path",
+  
+  "SANDBOX.cItem.ItemAttribute.RollName.Caption":"Roll Name",
+  "SANDBOX.cItem.ItemAttribute.RollName.Tooltip":"Can be an Expression.",
+  
+  "SANDBOX.cItem.ItemAttribute.RollId.Caption":"Roll ID",
+  "SANDBOX.cItem.ItemAttribute.HasDialog.Caption":"Has Dialog",
+  "SANDBOX.cItem.ItemAttribute.DialogName.Caption":"Dialog Panel (Drag Here)",
+  
+  "SANDBOX.cItem.ItemAttribute.RollFormula.Caption":"Roll Formula",
+  "SANDBOX.cItem.ItemAttribute.RollFormula.Tooltip":"Must be a valid Roll Expression.",
+  
+  "SANDBOX.cItem.ItemAttribute.Mod.NewMod.Caption":"NEW MOD",
+  "SANDBOX.cItem.ItemAttribute.Mod.NewMod.Tooltip":"Add new modifier",
+  "SANDBOX.cItem.ItemAttribute.Mod.DeleteMod.Tooltip":"Delete modifier",
+  "SANDBOX.cItem.ItemAttribute.Mod.ModHeader.Caption":"MOD",
+  
+  "SANDBOX.cItem.ItemAttribute.Mod.Name.Caption":"Name",
+  "SANDBOX.cItem.ItemAttribute.Mod.Once.Caption":"Once",
+  "SANDBOX.cItem.ItemAttribute.Mod.Type.Caption":"Type",
+  "SANDBOX.cItem.ItemAttribute.Mod.CondAt.Caption":"IF Condition Expression",
+  "SANDBOX.cItem.ItemAttribute.Mod.CondAt.Tooltip":"A property key(without @{..} or #{..}).<br>Can be a Expression(including property key with @{..} or #{..})",
+  "SANDBOX.cItem.ItemAttribute.Mod.CondOp.Caption":"Operator",
+  "SANDBOX.cItem.ItemAttribute.Mod.CondOp.None.Caption":"NONE",
+  "SANDBOX.cItem.ItemAttribute.Mod.CondValue.Caption":"Value",
+  "SANDBOX.cItem.ItemAttribute.Mod.CondValue.Tooltip":"Only static string/number/true/false, no Expression",
+  "SANDBOX.cItem.ItemAttribute.Mod.CondValue.Caption":"Value",
+  "SANDBOX.cItem.ItemAttribute.Mod.ListMod.Caption":"Mode",
+  "SANDBOX.cItem.ItemAttribute.Mod.ListMod.Include.Caption":"Include",
+  "SANDBOX.cItem.ItemAttribute.Mod.ListMod.Remove.Caption":"Remove",
+  "SANDBOX.cItem.ItemAttribute.Mod.Attribute.Caption":"Property Key",
+  "SANDBOX.cItem.ItemAttribute.Mod.Attribute.Tooltip":"A actor property key(without @{..})",
+  "SANDBOX.cItem.ItemAttribute.Mod.Value.Caption":"Value",
+  "SANDBOX.cItem.ItemAttribute.Mod.Value.Tooltip":"Can be an Expression unless Type is CREATE",
+  "SANDBOX.cItem.ItemAttribute.Mod.RollId.Caption":"Roll ID",
+  "SANDBOX.cItem.ItemAttribute.Mod.RollIdValue.Caption":"Value",
+  "SANDBOX.cItem.ItemAttribute.Mod.SelectNum.Caption":"Select",
+  "SANDBOX.cItem.ItemAttribute.Mod.SelectNum.Tooltip":"0 for all",
+  "SANDBOX.cItem.ItemAttribute.Mod.ItemDropArea.Caption":"ITEMS(Drop below)",
+  
+  "SANDBOX.RollExpressionNoTargetsSelected":"No target(s) selected",
+  "SANDBOX.GMAuthorityRequiredTitle":"Insufficient permission",
+  "SANDBOX.GMAuthorityRequiredBody":"This action require GM permissions to perform",
+  
+  "SANDBOX.ItemTypeProperty":"Property",
+  "SANDBOX.ItemTypePanel":"Panel",
+  "SANDBOX.ItemTypeMultiPanel":"Multipanel",
+  "SANDBOX.ItemTypeGroup":"Group",
+  "SANDBOX.ItemTypeSheetTab":"Sheettab",
+  "SANDBOX.ItemTypeLookup":"Lookup",
+  "SANDBOX.ItemTypecItem":"cItem",
+  "SANDBOX.cItemModifikation":"Modification",
+  "SANDBOX.TokenActorPropertiesInfo":"Token actors inherit all properties from its source actor, to remove a inherited property, it must be removed from the source actor. A token actor can have properties not found in its source actor and they can be removed.",
+  "SANDBOX.ConfirmRemoveActorProperty_Title":"Remove property from {actortype}actor?",
+  "SANDBOX.ConfirmRemoveActorProperty_Body":"Remove property <strong>{propertykey}</strong> from {actortype}actor <strong>{actorname}</strong>?<br>This can not be undone.",
+  
+  "SANDBOX.ChatMessageSecretReveal":"Reveal secrets",
+  "SANDBOX.ChatMessageSecretHide":"Hide secrets",
+  "SANDBOX.SheetToggleDeleteItemVisibleLabelCaption":"Icons",
+  "SANDBOX.SheetToggleDeleteItemVisibleLabelTooltip":"Show/Hide Delete/Add icons for subitems ",
+  
+  "SANDBOX.TransferFrom":"Transfer from",
+  "SANDBOX.TransferTakeAll":"Take All",
+  "SANDBOX.TransferTransferConsumedFirst":"Transfer consumed items first",
+  
+  "SANDBOX.DuplicateHandling_Title":"Existing {documenttype} found",
+  "SANDBOX.DuplicateHandling_Body":"<h3>{documenttype} with this key({documentkey}) already exists</h3> ",
+  "SANDBOX.DuplicateHandling_TableHeaderImage":"Image",
+  "SANDBOX.DuplicateHandling_TableHeaderName":"Name",
+  "SANDBOX.DuplicateHandling_TableHeaderModified":"Modified",
+  "SANDBOX.DuplicateHandling_TableRowExisting":"Existing",
+  "SANDBOX.DuplicateHandling_TableRowNew":"New",
+  "SANDBOX.DuplicateHandling_Button_Overwrite":"Overwrite",
+  "SANDBOX.DuplicateHandling_Button_Duplicate":"Duplicate",
+  "SANDBOX.DuplicateHandling_Button_Skip":"Skip",
+  "SANDBOX.DuplicateHandling_Button_Abort":"Abort",
+  
+  "SANDBOX.ConfirmDeleteDocumentsTitle":"Confirm to delete {documenttype}",
+  "SANDBOX.ConfirmDeleteDocumentsBody":"<h3>Please confirm to delete {documenttype}</h3><p>This will delete {documenttype}. Data in compendiums will not be deleted.</p><p><strong>This can not be undone.</strong></p><p>Make sure that you have backuped your world data (or know what you are doing).</p>",
+  
+  "SANDBOX.ImportJSONInvalidFile":"Import file can not be empty",
+  "SANDBOX.confirmStartImportPromptTitle":"Confirm to start import process",
+  "SANDBOX.confirmStartImportPromptBody":"Before importing, make sure that you have backed up your data.<p>The import process can not be reversed and might take a while.</p><p>You can follow the import process in the Console(press F12)</p><p>A dialog will be shown when migration is complete</p>",
+  "SANDBOX.ImportSuccesfullBody":"Import completed succesfully",
+  "SANDBOX.ImportCompletedBody":"Import completed.",
+  "SANDBOX.ImportFailedBody":"Import completed with errors, please check the Console(press F12) for errors",
+  "SANDBOX.ImportDataIsFromPreV10Title":"Incompatible import format",
+  "SANDBOX.ImportDataIsFromPreV10Body":"This import file can not be imported, it is from Sandbox using Foundry v9 or earlier.",
+  
+  "SANDBOX.confirmRemoveSubItemPromptTitle":"Remove {itemtype}: {itemname} ",
+  "SANDBOX.confirmRemoveSubItemPromptBody":"{itemtype} <strong>{itemname}</strong> will be removed from {parenttype} <strong>{parentname}</strong>",
+  
+  "SANDBOX.BuildActorTemplatesCompleteBody":"<h3>Actor template(s) rebuilt</h3><p>Click OK to continue</p>",
+  
+  "SANDBOX.VersionManagementUpdateItemImagesPromptTitle":"Confirm update items images",
+  "SANDBOX.VersionManagementUpdateItemImagesPromptBody":"<h3>Sandbox item images</h3><p>Update icon image for all Sandbox items (properties/panels/multipanels/groups/sheettabs/cItems)?</p><p>Only the default Sandbox images will be updated, any custom images will be left untouched.</p><p>For Sandbox world with many items, this might take some time.</p>",
+  
+  "SANDBOX.VersionManagementBeforeMigrationBody":"<h3>World data need to be migrated</h3><p>Click OK to start world data migration.</p><p>If your world contains many actors/items, this might take some time.</p><p>You can follow the migration process in the Console(press F12)</p><p>A dialog will be shown when migration is complete</p>",
+  "SANDBOX.VersionManagementAfterMigrationBody":"<h3>Migration complete</h3><p>Click OK to continue</p>",
+  "SANDBOX.VersionManagementAfterMigrationTo10NoticeBody":"<h3>Important Note!</h3><p>When migrating a Sandbox world from older versions(before Sandbox 0.14.0/Foundry 10.x), all actors/actor templates will be in an faulty state and can not be opened.</p><p>Use <strong>Build Actor Templates</strong> from the <strong>Sandbox System Builder Section</strong> in the <strong>Settings Sidebar</strong> to update actor templates to v10 data model and then Reload all actors</p>",
+  "SANDBOX.VersionManagementExtensionsWarningBody":"<h3>About Sandbox Extensions</h3><p>The module <strong>Sandbox Extensions</strong> are no longer compatible with Sandbox and will be disabled</p>",
+  
+    "sandbox": {
+    "settings": {
+      "forms": {
+        "SETTINGS_FORMS_TOOLS": {
+          "Name": "Sandbox Tools",
+          "Hint": "Show Sandbox Tools"
+        },
+        "SETTING_FORMS_SETTINGS": {
+          "Name": "Sandbox Settings",
+          "Hint": "Show Sandbox Settings"
+        }
+      },
+      "categories": {
+        "GENERAL_OPTIONS": {
+          "Name": "General Options",
+          "Hint": "General options for Sandbox"
+        },
+        "SHOW_OPTIONS": {
+          "Name": "Show Options",
+          "Hint": "Show options for Sandbox"
+        },
+        "CITEM_OPTIONS": {
+          "Name": "cItem & tables Options",
+          "Hint": "Options for cItems & tables"
+        },
+        "ITEM_DELETE_PROTECTION": {
+          "Name": "Item Delete protection",
+          "Hint": "Item Delete Protection helps to stop uninteded deletion of sub items"
+        },
+        "GENERAL_DISPLAY_OPTIONS": {
+          "Name": "General Display Options",
+          "Hint": "General display options"
+        },
+        "ITEM_SHEET_OPTIONS": {
+          "Name": "Item Sheets Options",
+          "Hint": "Options for displaying item sheets"
+        },
+        "AUTOGENERATION_OPTIONS": {
+          "Name": "Item Autogeneration Options",
+          "Hint": "Options for how autogenerating is applied"
+        },
+        "AUTOGENERATION_PREFIXES_SUFFIXES": {
+          "Name": "Item Autogeneration Prefixes And Suffixes",
+          "Hint": "Prefixes/suffixes used for autogenerating data"
+        },
+        "KEY_VALIDATION_OPTIONS": {
+          "Name": "Key Validation Options",
+          "Hint": "Options for determine valid keys"
+        },
+        "SHEET_OPTIONS": {
+          "Name": "Sheet Options",
+          "Hint": "Options for displaying sheets"
+        },
+        
+        "ACTOR_SHEET_OPTIONS": {
+          "Name": "Actor Sheets Options",
+          "Hint": "Options for displaying actor sheets"
+        }                              
+      },
+      "settings":{        
+        "PREFIX_PROPERTY": {
+          "Name": "Prefix for property key",
+          "Hint": "Used for autogenerating property key when <b>Use property data type for prefix</b> is unchecked"
+        },
+        
+        "PREFIX_PROPERTY_SIMPLETEXT": {
+          "Name": "Prefix for simpletext property key",
+          "Hint": "Used for autogenerating property key when <b>Use property data type for prefix</b> is checked"
+        },
+        "PREFIX_PROPERTY_SIMPLENUMERIC": {
+          "Name": "Prefix for simplenumeric property key",
+          "Hint": "Used for autogenerating property key when <b>Use property data type for prefix</b> is checked"
+        },
+        "PREFIX_PROPERTY_CHECKBOX": {
+          "Name": "Prefix for checkbox property key",
+          "Hint": "Used for autogenerating property key when <b>Use property data type for prefix</b> is checked"
+        },
+        "PREFIX_PROPERTY_RADIO": {
+          "Name": "Prefix for radio property key",
+          "Hint": "Used for autogenerating property key when <b>Use property data type for prefix</b> is checked"
+        },
+        "PREFIX_PROPERTY_TEXTAREA": {
+          "Name": "Prefix for textarea property key",
+          "Hint": "Used for autogenerating property key when <b>Use property data type for prefix</b> is checked"
+        },
+        "PREFIX_PROPERTY_LIST": {
+          "Name": "Prefix for list property key",
+          "Hint": "Used for autogenerating property key when <b>Use property data type for prefix</b> is checked"
+        },
+        "PREFIX_PROPERTY_LABEL": {
+          "Name": "Prefix for label property key",
+          "Hint": "Used for autogenerating property key when <b>Use property data type for prefix</b> is checked"
+        },
+        "PREFIX_PROPERTY_BADGE": {
+          "Name": "Prefix for badge property key",
+          "Hint": "Used for autogenerating property key when <b>Use property data type for prefix</b> is checked"
+        },
+        "PREFIX_PROPERTY_TABLE": {
+          "Name": "Prefix for property key",
+          "Hint": "Used for autogenerating property key when <b>Use property data type for prefix</b> is checked"
+        },
+        "PREFIX_PROPERTY_BUTTON": {
+          "Name": "Prefix for button property key",
+          "Hint": "Used for autogenerating property key when <b>Use property data type for prefix</b> is checked"
+        },
+
+        "PREFIX_PANEL": {
+          "Name": "Prefix for panel key",
+          "Hint": "Used for autogenerating key"
+        },
+        "PREFIX_MULTIPANEL": {
+          "Name": "Prefix for multipanel key",
+          "Hint": "Used for autogenerating key"
+        },
+        "PREFIX_GROUP": {
+          "Name": "Prefix for group key",
+          "Hint": "Used for autogenerating key"
+        },        
+        "PREFIX_LOOKUP": {
+          "Name": "Prefix for lookup key",
+          "Hint": "Used for autogenerating key"
+        },
+        "PREFIX_TAB": {
+          "Name": "Prefix for tab key",
+          "Hint": "Used for autogenerating key"
+        },
+        "SUFFIX_FONTGROUP": {
+          "Name": "Suffix for item fontgroup",
+          "Hint": "Used for autogenerating CSS class"
+        },
+        "SUFFIX_INPUTGROUP": {
+          "Name": "Suffix for item inputgroup",
+          "Hint": "Used for autogenerating CSS class"
+        },
+        "SUFFIX_HEADERGROUP": {
+          "Name": "Suffix for item headergroup",
+          "Hint": "Used for autogenerating CSS class"
+        },  
+        "SUFFIX_ROLLID": {
+          "Name": "Suffix for item roll id",
+          "Hint": "Used for autogenerating roll id"
+        },  
+        "SUFFIX_ROLLNAME": {
+          "Name": "Suffix for item roll name",
+          "Hint": "Used for autogenerating roll name"
+        },
+        "OPTION_KEY_CONVERT_TO_CASE": {
+          "Name": "Convert key to case",
+          "Hint": "Used for autogenerating key"
+        }, 
+        "OPTION_CSS_CONVERT_TO_CASE": {
+          "Name": "Convert CSS to case",
+          "Hint": "Used for autogenerating CSS class"
+        }, 
+        "OPTION_ENFORCED_VALIDATION": {
+          "Name": "Enforced key validation mode",
+          "Hint": "<b>Unchecked:</b> Sandbox standard - Keys are valid unless containing space, special characters or empty.<br>Keys for can be duplicate between datatypes except panels/multipanels<br><b>Checked:</b> Enforced - Keys are valid if containing only A-Z, a-z,0-9,_(underscore) and not empty.<br>Keys can not be duplicate between datatypes"
+        },   
+        
+        "OPTION_CONFIRM_BATCH_OVERWRITE": {
+          "Name": "Confirm batch overwrite",
+          "Hint": "If checked, ask user for confirmation before applying batch overwrite(Autogenerate All,Clear All)"
+        }, 
+        "OPTION_CONFIRM_ATTRIBUTE_OVERWRITE": {
+          "Name": "Confirm attribute overwrite",
+          "Hint": "If checked, ask user for confirmation before applying attribute overwrite(Autogenerate)"
+        }, 
+        "OPTION_AUTOGENERATE_PROPERTY_ICON": {
+          "Name": "Change property icon automatically",
+          "Hint": "If checked, changes to a property's datatype will automatically change the propertys icon"
+        }, 
+        
+        
+        "OPTION_SHOW_ITEM_HELPERS": {
+          "Name": "Show item helpers",
+          "Hint": "If checked, show item helper menus on item sheets.<br><i>Applies for GMs only.</i>"
+        }, 
+        
+        "OPTION_ACTIVATE_ITEM_DELETE_PROTECTION": {
+          "Name": "Activate item deletion protection",
+          "Hint": "If checked, delete/add icons will be hidden as default, a checkbox for toggling the visibility of the delete icon is added to sheets window title."
+        }, 
+        
+        "OPTION_USE_DATATYPE_PREFIX": {
+          "Name": "Use property data type for prefix",
+          "Hint": "If checked, when autogenerating a property key, use the propertys data type for prefix"
+        },
+        
+        
+        "OPTION_USE_PREFIX_SUFFIX": {
+          "Name": "Use prefix/suffix for autogenerating",
+          "Hint": "If checked, when autogenerating a field, add prefix and suffix"
+        },
+        
+        
+        
+        "OPTION_TRANSLITERATE_NON_LATIN": {
+          "Name": "Transliterate non-latin characters",
+          "Hint": "If checked, when autogenerating key, any non-latin characters are transliterated into latin equivalents.<br>When <b>Enforced key validation mode</b> is checked, transliteration will be executed regardless of this setting.<br><b>Please note that using non-latin characters as key might not work in roll expressions</b>"
+        },
+        
+        
+        "OPTION_SET_DEFAULT_ITEM_TAB": {
+          "Name": "Override item default tab",
+          "Hint": "When checked, the default(starting) tab when an item is displayed is Details or Attributes(for cItems).<br><i>Applies for GMs only.</i>"
+        },
+        
+        
+        "OPTION_ADAPT_ITEM_SHEET_POSITION": {
+          "Name": "Adapt item sheet size/position",
+          "Hint": "If checked, the starting size and position are adapted to item content.<br><i>Applies for GMs only.</i>"
+        },
+                
+        "OPTION_DISPLAY_ID_IN_SHEET_CAPTION": {
+          "Name": "Display ID in sheet caption",
+          "Hint": "If checked, the item/actors ID will be displayed as a tooltip icon in the sheets window title.<br> Clicking this icon will output the item/actor data in the console. Useful for debugging problems.<br>For actors, CTRL+CLICK for showing Actor Properties Manager<br><i>Applies for GMs only.</i>"
+        },
+                
+        "OPTION_DISPLAY_SHOW_TO_OTHERS_IN_SHEET_CAPTION": {
+          "Name": "Display Show To Others in sheet caption",
+          "Hint": "If checked, the a clickable icon will be shown in the sheets window title."
+        },
+        
+        "OPTION_USE_CITEM_INFO_FORM_FOR_GMS": {
+          "Name": "Show GMs cItem description only",
+          "Hint": "If checked, clicking a cItem link in a table or chat, only the data on the cItem Info-tab will be showed. No permissions on the cItems is needed.<br><i>Applies for GMs only.</i>"
+        },
+        
+        "OPTION_USE_CITEM_INFO_FORM_FOR_PLAYERS": {
+          "Name": "Show players cItem description only",
+          "Hint": "If checked, clicking a cItem link in a table or chat, only the data on the cItem Info-tab will be showed. No permissions on the cItems is needed.<br><i>Applies for players only.</i>"
+        },
+                
+        
+        "showADV": {
+          "Name": "Show Roll with Advantage option",
+          "Hint": "If checked, 1d20,ADV,DIS options will be displayed under the Actor's name"
+        },
+        "showSimpleRoller": {
+          "Name": "Show d20 Roll icon option",
+          "Hint": "If checked a d20 icon will be displayed under the Actor's name"
+        },
+        "consistencycheck": {
+          "Name": "Check cItem Consistency",
+          "Hint": "If checked, when rebuilding template, every cItem will be evaluated for consistency. WARNING: May take several minutes in big systems"
+        },
+        "showDC": {
+          "Name": "Show Difficulty Class window",
+          "Hint": "If checked a DC box will appear at the bottom of the screen"
+        },
+        "useDCList": {
+          "Name": "System Difficulty Classes",
+          "Hint": "List of Difficulty Classes defined for this system.<br>This will add a dropdown to the DC window for quick selection.<br>Format: <i>Class1:Value1;Class2:Value2...</i><br>Leave blank for none.<br>Example <i>Easy:1;Normal:2;Hard:3</i>"
+        },
+        "showLastRoll": {
+          "Name": "Show Last Roll window",
+          "Hint": "If checked a box displaying the results of the last Roll will appear at the bottom of the screen"
+        },
+        "diff": {
+          "Name": "GM difficulty",
+          "Hint": "This is linked to the DC Box at the bottom of the screen"
+        },
+        "rollmod": {
+          "Name": "Show Roll Modifier",
+          "Hint": "If checked, a input is displayed on actor sheets. This number will be added to the total of all rolls"
+        },
+        "tokenOptions": {
+          "Name": "Token Options",
+          "Hint": "If checked, you can specify bar1 under token on the template Token tab, also, when creating a non-linked token, it will get automatically a number added to its token name."
+        },
+        "customStyle": {
+          "Name": "CSS Style file",
+          "Hint": "Custom styling file(CSS) to load.<br>Leave blank for none."
+        },
+        "initKey": {
+          "Name": "Initiative Property Key",
+          "Hint": "The key of the property that contains the roll expression to use for initiative in the Combat Tracker"
+        },
+        "auxsettext1": {
+          "Name": "Auxiliary settings text 1",
+          "Hint": "After editing, please refresh instance"
+        },
+        "idDict": {
+          "Name": "Dictionary IDs for importing cItems",
+          "Hint": "As cItems dont have word keys, this ensures faster lokup"
+        },
+        
+        
+        "SETTING_CITEM_ICON_SIZE": {
+          "Name": "cItem icon size",
+          "Hint": "The size(in px) to display cItem icons in tables.<br>Default is 26. Set 0 to display the icon original size from image file."
+        },
+        
+        "OPTION_DISPLAY_SUBITEMS_ICONS": {
+          "Name": "Enable show subitem icons",
+          "Hint": "If checked, the icon for subitems will be displayed in subitem tables(properties in panel, panels in tabs, citems in cItem tab etc)"
+        },
+        
+        "OPTION_SHEET_RESIZABLE_CONTENT": {
+          "Name": "Enable resizable panels",
+          "Hint": "If checked, panel/multipanels/columns wil be resized relatively instead of a fixed width<br>Enabling this in a world with existing actors might require a re-disposition of panels."
+        },
+        
+        "WORLD_LAST_CORE_VERSION_USED": {
+          "Name": "Last Core version used",
+          "Hint": "The last version of Foundry VTT core used with this world"
+        },
+        
+        "WORLD_LAST_SYSTEM_VERSION_USED": {
+          "Name": "Last Sandbox version used",
+          "Hint": "The last version of Sandbox system used with this world"
+        }
+      }
+      
+    }
+  }   
+}

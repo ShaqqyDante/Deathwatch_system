@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="../systems/sandbox/styles/gamefolderpicker.css">
+<form class="game-folder-picker-form-body" autocomplete="off" enctype="multipart/form-data">
+  <div class="current-folder-type">
+    
+  <span class="{{#if (ne this.type "Actor")}} game-folder-picker-greyedout {{/if}}"><i class="fas fa-user"></i> Actor</span>
+  <span class="{{#if (ne this.type "Item" )}} game-folder-picker-greyedout {{/if}}"><i class="fas fa-suitcase"></i> Item</span>
+  <span class="{{#if (ne this.type "Scene")}} game-folder-picker-greyedout {{/if}}"><i class="fas fa-map"></i> Scene</span>
+  <span class="{{#if (ne this.type "JournalEntry")}} game-folder-picker-greyedout {{/if}}"><i class="fas fa-book-open"></i> Journal</span>
+  <span class="{{#if (ne this.type "RollTable")}}  game-folder-picker-greyedout {{/if}}"><i class="fas fa-th-list"></i> Table</span>
+  <span class="{{#if (ne this.type "Cards")}} game-folder-picker-greyedout  {{/if}}"><i class="fa-solid fa-cards"></i> Cards</span>
+  <span class="{{#if (ne this.type "Playlist")}} game-folder-picker-greyedout {{/if}}"><i class="fas fa-music"></i> Playlist</span>
+  <span class="{{#if (ne this.type "Macro")}} game-folder-picker-greyedout {{/if}}"><i class="fas fa-code"></i> Macro</span>    
+        
+      
+  </div>
+  <div class="form-group current-folder">
+    <button type="button" id="game-folder-picker-form-home" class="home" title="Go to {{this.type}} folder root">
+        <i class="fas fa-house fa-fw"></i>
+    </button>
+    <button type="button" id="game-folder-picker-form-back" class="back" title="Go one level up"{{#unless canGoBack}}disabled{{/unless}}>
+        <i class="fas fa-level-up-alt fa-flip-horizontal fa-fw"></i>
+    </button>
+    <div class="form-group selected-folder">
+        <label><i class="fas fa-folder fa-fw"></i> Selected folder </label>
+        <input type="text" id="game-folder-picker-selected" name="folder" data-folderid="{{this.current_id}}" data-folderfolder="{{this.current_folder}}" value="{{this.current_name}}" disabled>
+      </div>
+  </div>
+  
+  <section class="gamefolderpicker-body">
+    <ul id="game-folder-picker-folder-list" class="game-folder-picker-folder-list">
+      {{#eachProperty foldersInCurrent}}
+        <li class='game-folder-picker-form-folder' id='{{value.id}}' data-folderid="{{value.id}}" data-folderfolder="{{value.folder}}"><i class="fas fa-folder fa-fw"></i> {{value.name}}</li>
+      {{/eachProperty }}
+    </ul>
+    {{#if noResults}}
+        <p class="note">No sub-folders in this folder</p>
+    {{/if}}
+  </section>
+        
+      
+      
+      
+      <!-- Footer -->
+      <footer class="form-footer flexrow">
+        <button type="submit" id="game-folder-picker-form-btn-select" title="Returns selected {{this.type}} folder">
+          <i class="fa fa-save"></i> Select selected folder
+        </button>
+        <button type="button" id="game-folder-picker-form-btn-cancel" title="Closes dialog without selecting folder">
+          <i class="fa fa-ban"></i> Cancel
+        </button>
+      </footer>
+
+</form>

@@ -1,0 +1,49 @@
+
+<form id="sb-actor-properties-manager-form-content" class="sb-actor-properties-manager-form-content">  
+  <table>
+    <tr>
+      <td class="sb-actor-properties-manager-actor-id">Actor ID</td><td><input             id="sb-actor-properties-manager-actor-id" type="text" value="{{actor.id}}"  disabled> </td>
+      {{#if istokenactor}}
+        <td class="sb-actor-properties-manager-token-id">Token ID <i class="sb-actor-properties-manager-token-warning fas fa-exclamation-circle" data-tooltip="{{localize 'SANDBOX.TokenActorPropertiesInfo'}}"></i></td><td><input             id="sb-actor-properties-manager-token-id" type="text" value="{{token.id}}"  disabled> </td>                    
+      {{/if}}
+      {{#if iscompendiumactor}}
+        <td class="sb-actor-properties-manager-compendium-type">Compendium Type  </td><td><input       id="sb-actor-properties-manager-compendium-type" type="text" value="{{compendium.type}}" disabled> </td>              
+      {{/if}}  
+    </tr>
+    <tr>
+      <td class="sb-actor-properties-manager-actor-name">Actor Name  </td><td><input       id="sb-actor-properties-manager-actor-name" type="text" value="{{actor.name}}" disabled> </td>     
+      {{#if istokenactor}}        
+        <td class="sb-actor-properties-manager-token-name">Token Name  </td><td><input       id="sb-actor-properties-manager-token-name" type="text" value="{{token.name}}" disabled> </td>            
+      {{/if}}
+      {{#if iscompendiumactor}}        
+        <td class="sb-actor-properties-manager-compendium-name">Compendium Name  </td><td><input       id="sb-actor-properties-manager-compendium-name" type="text" value="{{compendium.name}}" disabled> </td>      
+      {{/if}}  
+    </tr>    
+  </table>
+
+<div class="sb-table-scrollable-container">
+  <!-- Main data container -->
+  <table class="sb-table-scrollable-table sb-actor-properties-manager-data-table" id="sb-actor-properties-manager-data-table" name="sb-actor-properties-manager-data-table">
+    <thead id="sb-actor-properties-manager-data-thead" class="sb-table-scrollable-table-thead sb-actor-properties-manager-data-thead">
+      <tr class="sb-table-scrollable-table-thead-tr" id="sb-actor-properties-manager-data-thead-row">
+        <th class="sb-table-scrollable-table-thead-th-icon"></th>
+        <th class="sb-table-scrollable-table-thead-th sb-table-scrollable-table-thead-th-key">Key</th>
+        <th class="sb-table-scrollable-table-thead-th">Name</th>
+        <th class="sb-table-scrollable-table-thead-th">Data Type</th>
+        <th class="sb-table-scrollable-table-thead-th">Attributes</th>
+        <th class="sb-table-scrollable-table-thead-th">Value</th>
+        <th class="sb-table-scrollable-table-thead-th-icon"></th>
+        <th class="sb-table-scrollable-table-thead-th">Created by</th>
+        <th class="sb-table-scrollable-table-thead-th">Remarks</th>
+        <th class="sb-table-scrollable-table-thead-th-manipulator"></th>
+      </tr>
+    </thead>
+    <tbody id="sb-actor-properties-manager-data-tbody" class="sb-table-scrollable-table-tbody sb-actor-properties-manager-data-tbody">
+      {{{rows}}}
+    </tbody>
+    
+  </table>
+  </div>
+  
+
+</form>

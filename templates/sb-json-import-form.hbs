@@ -1,0 +1,62 @@
+<form>    
+
+  <table class="sb-import-table">
+  <tr class="sb-import-table"><th class="sb-import-th" colspan="3"><h3>Required input</h3></th></tr>
+    <tr class="sb-import-table">
+      <td>Import file</td>
+      <td><input type="text" id="sb-import-importfile" value="" disabled></input></td>
+      <td><button type="button" id="sb-import-btn-browse-importfile"  title="Browse for import file"><i class="fas fa-file fa-fw"></i></button></td>      
+    </tr>
+
+<tr><th class="sb-import-th" colspan="3"><h3>Options</h3></th></tr>
+    <tr class="sb-import-table">
+      <td>Imported Items target folder <i class="fas fa-circle-info" title="To which game folder the import will place items. The default(un-modded) maximum folder depth in Foundry v10 is 3, in Foundry v11 is 4). Leave blank to place items at the root"></i> </td>
+      <td>        
+        <input type="text" id="sb-import-items-target-folder" data-folderid="" data-folderfolder="" value="" disabled></input> </td>      
+      <td><button type="button" id="sb-import-btn-browse-items-target-folder"  title="Browse for game folder"><i class="fas fa-folder fa-fw"></i></button></td>      
+    </tr>
+
+    <tr class="sb-import-table">
+      <td>Imported Actor target folder <i class="fas fa-circle-info" title="To which game folder the import will place actors. The default(un-modded) maximum folder depth in Foundry v10 is 3, in Foundry v11 is 4). Leave blank to place actors at the root"></i> </td>
+      <td>
+        
+        <input type="text" id="sb-import-actors-target-folder" data-folderid="" data-folderfolder="" value="" disabled></input> 
+      </td>
+      <td><button type="button" id="sb-import-btn-browse-actors-target-folder" title="Browse for game folder"><i class="fas fa-folder fa-fw"></i></button></td>      
+    </tr>
+
+    <tr class="sb-import-table">
+      <td style="vertical-align: top;">Duplicate handling <i class="fas fa-circle-info" title="Defines how the import handles if an import item/actor already exists in the world. Note that this is identified by ID and not name"></i> </td>
+      <td>
+        <input type="radio" id="sb-import-duplicate-overwrite" name="sb-import-duplicate-handling" value=1 ></input>
+        <label for="sb-import-duplicate-overwrite">Overwrite existing item/actor with imported data</label><br>
+
+        <input type="radio" id="sb-import-duplicate-duplicate" name="sb-import-duplicate-handling" value=2 ></input>
+        <label for="sb-import-duplicate-duplicate">Create new  item/actor with imported data</label><br>
+        
+        <input type="radio" id="sb-import-duplicate-skip" name="sb-import-duplicate-handling" value=3></input>
+        <label for="sb-import-duplicate-skip">Skip import for existing items/actors</label><br>
+
+        <input type="radio" id="sb-import-duplicate-ask" name="sb-import-duplicate-handling" value=4></input>
+        <label for="sb-import-duplicate-ask">Ask user for each existing item/actor found</label><br>
+
+        <input type="radio" id="sb-import-duplicate-abort" name="sb-import-duplicate-handling" value=0 checked></input>
+        <label for="sb-import-duplicate-abort">Abort entire import</label>
+      </td>
+      <td></td>      
+    </tr>
+
+  </table><!-- comment -->
+
+
+  <!-- Settings Footer -->
+  <footer class="sheet-footer flexrow">
+    <button type="submit" id="sb-import-btn-run" title="Start import">
+      <i class="fas fa-file-import"></i> Import
+    </button>
+    <button type="button" id="sb-import-btn-close" title="Cancel import">
+      <i class="fas fa-ban"></i> Cancel
+    </button>
+  </footer>
+
+</form>

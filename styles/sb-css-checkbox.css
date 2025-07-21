@@ -1,0 +1,78 @@
+/*** custom checkboxes ***/
+input[type=checkbox]:not(#module-management input) {
+  position: relative;
+  -webkit-filter: none;
+  -webkit-appearance: none;
+  appearance:none!important;  
+  border:none !important;
+}
+
+ input[type=checkbox]:not(#module-management input):checked {     
+  -webkit-filter: none;
+  border:none !important;
+  padding:0px !important;
+  margin-left:0px !important;
+}
+ input[type=checkbox]:not(#module-management input):not(:checked) {     
+  -webkit-filter: none;
+  border:none !important;
+  padding:0px !important;
+  margin-left:0px !important;
+}
+/* to hide the checkbox itself */
+input[type=checkbox]:not(#module-management input):before {
+  cursor:pointer;
+  position: relative;
+  background-color: none;
+  height: 20px;
+  width: 20px;
+  font-family: var(--font-awesome);
+  font-size:16px;
+  font-weight: bold;
+  
+  line-height:16px;
+  display: inline-block;
+  content:"\f00c";
+  letter-spacing: 10px;
+  margin-left:0px !important;
+  padding:1px !important;
+  box-shadow: 0px -20px var(--sb-background-color-inputs) inset;
+  color:var(--sb-background-color-inputs);
+  box-sizing: border-box;
+  border: var(--sb-border-width-inputs) var(--sb-border-style-inputs) var(--sb-border-color-inputs);
+  border-radius: var(--sb-border-radius-inputs);
+}
+ 
+
+/* */
+input[type=checkbox]:not(#module-management input):checked:before {	
+  font-family: var(--font-awesome);
+  height: 20px;
+  width: 20px;
+  font-size:14px;
+  font-weight: bold;
+  text-shadow: 0px 1px, 1px 0px, 1px 1px;
+  line-height:16px;
+  display: inline-block;
+  content:"\f00c";
+  letter-spacing: 10px;
+  margin-left:0px !important;
+  padding:1px 0px 0px 2px !important;
+  box-shadow: 0px -20px var(--sb-background-color-inputs) inset;
+  color:var(--sb-color-inputs);
+  box-sizing: border-box;
+  border: var(--sb-border-width-inputs) var(--sb-border-style-inputs) var(--sb-border-color-inputs);
+  border-radius: var(--sb-border-radius-inputs);
+}
+
+input[type=checkbox]:not(#module-management input):disabled:before{
+  box-shadow: 0px -20px var(--sb-background-color-inputs-disabled) inset;
+  color:rgba(0,0,0,0);
+  pointer-events: none;
+} 
+
+input[type=checkbox]:not(#module-management input):checked:disabled:before{
+  box-shadow: 0px -20px var(--sb-background-color-inputs-disabled) inset;
+  color:var(--sb-color-inputs-disabled);
+  pointer-events: none;
+} 

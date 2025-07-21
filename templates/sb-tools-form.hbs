@@ -1,0 +1,36 @@
+
+{{#*inline "submenuPartial"}}
+{{#if this.display}}
+<div class="form-group submenu {{#if this.indevelopment}}sbe-in-development{{/if}}">
+  <label>{{localize this.name}}</label>
+  <button class="sb-tools-button" type="button" id="{{this.id}}" name="{{this.id}}">
+      <i class="{{this.icon}}"></i> {{localize this.name}}
+    </button>
+  <p class="notes">{{localize this.hint}}</p>  
+</div>
+{{/if}}
+{{/inline}}
+
+<form>
+<h2 class="module-header" style="padding-top:5px;border-top: 1px solid #b5b3a4;">
+Sandbox Tools
+<i id="sb-btn-show-sandbox-settings" 
+title="Show Sandbox Settings"  
+class="fas fa-cog"></i>
+
+
+
+
+
+</h2>
+
+
+
+
+{{#each submenus}}
+    {{> submenuPartial}}
+    
+    
+{{/each}}
+
+</form>

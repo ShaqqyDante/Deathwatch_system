@@ -1,0 +1,35 @@
+h3.system-settings-category-header {
+   font-size: 1.25em;
+    border-bottom: 1px solid var(--color-underline-header); 
+}
+i.system-settings-category-toggle{
+  
+}
+
+div.system-settings-category-settings{
+  display:none;
+}
+
+form .form-group > label.system-settings-setting-name{
+  
+}
+
+.system-settings-toggle-all-span{
+  width:100%;
+  text-align: right;
+}
+.system-settings-system-header{
+  display: inline-block;
+  padding-top:5px;
+  border-top: 1px solid #b5b3a4;
+  border-bottom:none;
+  margin-bottom: 0px;
+}
+
+.system-settings-system-content{
+  overflow-y: auto;
+  max-height: calc(100vh - 150px);
+  padding-right:0.5em;
+  border-top: 1px solid var(--color-underline-header);
+  padding-top: 0.5em;
+}
