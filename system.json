@@ -1,55 +1,47 @@
 {
-  "id": "sandbox",
-  "title": "Sandbox System Builder",
-  "description": "Custom system builder to build character sheets and rulesets for any game.",
-  "version": "0.14.4.4",
-  "compatibility": {
-    "minimum": "10",
-    "verified": "11"
-  },
-  "templateVersion": 1,
-  "authors": [{
-      "name": "Seregras"
-    }, {
-      "name": "Alondaar"
-    }, {
-      "name": "Ramses800"
-    }],
+  "id": "worldbuilding",
+  "version": "0.8.2",
+  "title": "Simple World-Building",
+  "url": "https://github.com/foundryvtt/worldbuilding/",
+  "description": "A minimalist game system which provides configurable Actor and Item templates to support free-form system agnostic game-play.",
+  "license": "LICENSE.txt",
+  "authors": [
+    {
+      "name": "Atropos",
+      "url": "https://foundryvtt.com",
+      "flags": {}
+    }
+  ],
   "esmodules": [
-    "module/sandbox.js"
+    "module/simple.js"
   ],
   "styles": [
-    "styles/sandbox.css",
-    "styles/dropdownmenu.css",
-    "styles/sb-codemirror.css",
-    "styles/system-settings.css",
-    "styles/sandbox-icons-font.css"
+    "styles/simple.css"
   ],
-  "relationships": {    
-    "requires": [{
-      "id": "_CodeMirror",
-      "type": "module",
-      "manifest": "https://raw.githubusercontent.com/League-of-Foundry-Developers/codemirror-lib/master/module.json",
-      "compatibility": {
-        "verified": "5.58.3-fvtt5"
-      }
-    }]
-  },
-  "packs": [],
-  "socket": true,  
   "languages": [
     {
       "lang": "en",
       "name": "English",
-      "path": "languages/en.json"
+      "path": "lang/en.json",
+      "flags": {}
+    },
+    {
+      "lang": "pl",
+      "name": "Polski",
+      "path": "lang/pl.json",
+      "flags": {}
     }
   ],
-  "gridDistance": 5,
-  "gridUnits": "ft",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "12"
+  },
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": "power",
-  "url":       "https://gitlab.com/rolnl/sandbox-system-builder/",
-  "manifest":  "https://gitlab.com/rolnl/sandbox-system-builder/-/raw/master/system.json",
-  "download":  "https://gitlab.com/rolnl/sandbox-system-builder/-/archive/v0.14.4.4/sandbox-system-builder-v0.14.4.4.zip",
-  "changelog": "https://gitlab.com/rolnl/sandbox-system-builder/-/raw/v0.14.4.4/changelog.md"
+  "manifest": "https://raw.githubusercontent.com/foundryvtt/worldbuilding/master/system.json",
+  "download": "https://github.com/foundryvtt/worldbuilding/archive/refs/tags/release-082.zip",
+  "grid": {
+    "distance": 1,
+    "units": "m"
+  }
 }
